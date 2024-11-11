@@ -1,0 +1,122 @@
+@font-face {
+	font-family: 'happy_monkey';
+	src: url('./assets/fonts/Happy_Monkey/HappyMonkey-Regular.ttf');
+}
+@font-face {
+	font-family: 'bold-bosa';
+	src: url('./assets/fonts/Bona_Nova_SC/BonaNovaSC-Bold.ttf');
+}
+@font-face {
+	font-family: 'italic-bosa';
+	src: url('./assets/fonts/Bona_Nova_SC/BonaNovaSC-Italic.ttf');
+}
+@font-face {
+	font-family: 'regular-bosa';
+	src: url('./assets/fonts/Bona_Nova_SC/BonaNovaSC-Regular.ttf');
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	font-family: 'regular-bosa';
+	background-image: url(./assets/img/background-img.PNG);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+header{
+	align-self: flex-end;
+}
+#content{
+	position: relative;
+	height: 100%;
+	align-self: flex-start;
+	color: #333;
+	border-radius: 10px;
+	background-color: #d9e2b685 ;
+	padding: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+	width: clamp(50%,600px,80%);
+	justify-content: center;
+	align-items: center;
+	row-gap: 2rem;
+	box-shadow: 0 4px 8px #0005;
+}
+
+.card {
+	background-color: #B2C78F;
+	color: #4F4F4F;
+	padding: 1rem 2rem;
+	min-width: 200px;
+	max-width: 600px;
+	clip-path: polygon(10% 0%, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0% 80%, 0% 20%);	
+	text-align: center;
+	border: 5px solid rgb(92, 60, 11);
+	font-weight: bold;
+}
+.card p{
+	font-size: 1.2rem;
+}
+.monkey-img{
+	position: absolute;
+	width: 200px;
+}
+.left{
+	top: 0;
+	left: 0;
+}
+.right{
+	bottom: 0;
+	right: 0;
+}
+.title{
+	font-size: 2.5rem;
+}
+button {
+	background-color: #D9E2B6; 
+	color: #4F4F4F; 
+	border: none;
+	padding: 10px 20px;
+	margin: 5px;
+	font-size: 16px;
+	border-radius: 20px; 
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+	background-color: #B2C78F; 
+	color: #FFFFFF; 
+	transform: translateY(-2px); 
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+button:focus {
+	outline: 2px solid #4F4F4F; 
+}
