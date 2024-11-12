@@ -22,7 +22,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	display: grid;
 	justify-items: center;
@@ -30,7 +30,9 @@ body {
 	font-family: 'regular-bosa';
 	background-image: url(./assets/img/background-img.PNG);
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-attachment:	fixed;
+	gap: 4rem;
+	padding: 1rem;
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -53,8 +55,7 @@ header{
 }
 #content{
 	position: relative;
-	height: 100%;
-	align-self: flex-start;
+	min-height: 100%;
 	color: #333;
 	border-radius: 10px;
 	background-color: #d9e2b685 ;
@@ -62,10 +63,14 @@ header{
 	display: flex;
 	flex-direction: column;
 	width: clamp(50%,600px,80%);
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	row-gap: 2rem;
 	box-shadow: 0 4px 8px #0005;
+	h1{
+		font-size: 2.5rem;
+		text-align: center;
+	}
 }
 
 .card {
@@ -76,6 +81,16 @@ header{
 	max-width: 600px;
 	clip-path: polygon(10% 0%, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0% 80%, 0% 20%);	
 	text-align: center;
+	border: 5px solid rgb(92, 60, 11);
+	font-weight: bold;
+}
+.contact-card {
+	background-color: #B2C78F;
+	color: #4F4F4F;
+	padding: 1rem 2rem;
+	min-width: 200px;
+	max-width: 600px;
+	clip-path: polygon(10% 0%, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0% 80%, 0% 20%);	
 	border: 5px solid rgb(92, 60, 11);
 	font-weight: bold;
 }
@@ -96,6 +111,16 @@ header{
 }
 .title{
 	font-size: 2.5rem;
+}
+header{
+	width: 100%;
+}
+nav{
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+	margin-top: 1rem;
 }
 button {
 	background-color: #D9E2B6; 
@@ -119,4 +144,41 @@ button:hover {
 
 button:focus {
 	outline: 2px solid #4F4F4F; 
+}
+.grid-menu{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+	gap: 2rem;
+	padding: 1rem 2rem;
+	h2{
+		font-size: 1.8rem;
+		grid-column: 1 / -1;
+		text-align: center;
+	}
+}
+.grid-menu > .dish-card:nth-child(4n){
+	grid-column: 1 / -1;
+	max-width: 400px;
+	justify-self: center;
+}
+.dish-card{
+	gap: .5rem;
+	background-color: #C2D4DD81;
+	padding: .5rem 1rem;
+	border-radius: 10px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	h3{
+		font-size: 1.5rem;
+	}
+}
+
+.dish-img{
+	max-width: 100px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px #0005;
 }
